@@ -13,6 +13,8 @@ let insertDivY
 
 div.addEventListener("mousedown", (e) => {
     div.style.backgroundColor = "gray";
+ 
+
     drawActive = !drawActive;
 
     insertDivX = e.offsetX
@@ -21,13 +23,12 @@ div.addEventListener("mousedown", (e) => {
 });
 
 div.addEventListener("mousemove", (e) => {
-
     
     if (drawActive) {
         divX = e.clientX - insertDivX;
-        divY = e.clientY - insertDivX;
-        div.style.left = `${divX - 50}px`;
-        div.style.top = `${divY - 50}px`;
+        divY = e.clientY - insertDivY;
+        div.style.left = `${divX}px`;
+        div.style.top = `${divY}px`;
 
     }
 });
